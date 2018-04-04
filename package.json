@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./server/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,10 +18,16 @@
     "style-loader": "^0.14.0",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-hot-middleware": "^1.2.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "echarts": "^4.0.4",
-    "jquery": "^3.1.1"
+    "express": "^4.13.3",
+    "express-ws": "^3.0.0",
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.5"
   }
 }
