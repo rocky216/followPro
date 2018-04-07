@@ -1,9 +1,9 @@
-// var macarons = require("./macarons")
+var dark = require("./dark.js")
 var echarts = require('echarts');
 import {fetch} from "utils"
 import demo1 from "demo/demo1"
 // 基于准备好的dom，初始化echarts实例
-var myChart = echarts.init(document.getElementById('main'),"macarons");
+var myChart = echarts.init(document.getElementById('main'),"dark");
 demo1(myChart)
 
 //数据递推

@@ -1,6 +1,10 @@
 "use strict";
+import $ from "jquery"
+import data from "mock/data.js"
 
 function demo1(myChart){
+
+  console.log(data)
 
   myChart.setOption({
     title: {
@@ -9,15 +13,25 @@ function demo1(myChart){
       link: "http://echarts.baidu.com/option.html#title.link"
     },
     legend: {
-      type: 'scroll',
+      type: 'plain',
       show: true,
     },
     grid: {
       show: true
     },
+    dataZoom: [{
+      start: '80'
+    },{
+      type: "inside"
+    }],
+    visualMap: [
+      
+    ],
     xAxis: {
       show: true,
-      //gridIndex: 1
+      data: data.map(function(item){
+        return item[0]
+      })
     },
     yAxis:{
       show: true,
@@ -26,15 +40,12 @@ function demo1(myChart){
     axisPointer: {
       show: true
     },
-    dataset: {
-      source: [
-        ['date', 'open', 'close', 'highest', 'lowest']
-        [12, 44, 55, 66, 2],
-        [23, 6, 16, 23, 1]
-      ]
-    },
+    
     series: {
-      type: "bar",
+      type: "line",
+      data: data.map(function(item){
+          return item[1]
+      })
     }
   })
 
